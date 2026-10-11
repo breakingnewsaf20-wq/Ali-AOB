@@ -19,6 +19,10 @@ jobs:
       - uses: subosito/flutter-action@v2
         with:
           channel: stable
+          flutter-version: '3.47.7'
+          cache: false
+      - name: Download Android artifacts
+        run: flutter precache --android
 
       - run: flutter pub get
 
