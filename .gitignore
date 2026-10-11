@@ -1,0 +1,23 @@
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+build/
+.pub/
+.idea/
+.vscode/
+*.iml
+android/.gradle/
+android/local.properties
+
+# Firebase and secrets
+.env
+.env.*
+!.env.example
+firebase.json
+google-services.json
+GoogleService-Info.plist
+*.jks
+*.keystore
+key.properties
+secrets/
