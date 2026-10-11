@@ -19,20 +19,7 @@ plugins {
 
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
-
-    def flutterProperties = new Properties()
-    file("local.properties").withInputStream {
-        flutterProperties.load(it)
-    }
-    def flutterSdkPathForRepo = flutterProperties.getProperty("flutter.sdk")
-
-    repositories {
-        google()
-        mavenCentral()
-        maven {
-            url = uri("${flutterSdkPathForRepo}/bin/cache/artifacts/engine/android")
-        }
-    }
+    repositories { google(); mavenCentral(); maven { url = uri("https://storage.googleapis.com/download.flutter.io") } }
 }
 
 rootProject.name = "afghan_online_bazaar"
